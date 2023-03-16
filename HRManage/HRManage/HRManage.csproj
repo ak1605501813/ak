@@ -21,5 +21,9 @@
     <Folder Include="Dto\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HelpClassLibrary\HelpClassLibrary.csproj" />
+  </ItemGroup>
+
 
 </Project>

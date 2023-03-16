@@ -28,6 +28,7 @@ namespace HRManage.Service
             }
         }
 
+
         /// <summary>
         /// 查询人员信息
         /// </summary>
@@ -72,3 +73,4 @@ namespace HRManage.Service
         }
     }
 }
+
