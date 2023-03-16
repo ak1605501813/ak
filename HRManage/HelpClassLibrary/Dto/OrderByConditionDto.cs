@@ -9,7 +9,7 @@ namespace HelpClassLibrary.Dto
         /// <summary>
         /// 排序字段
         /// </summary>
-        public string Sort { get; set; }
+        public string Sort { get; set; } 
         /// <summary>
         /// 排序类型
         /// </summary>
