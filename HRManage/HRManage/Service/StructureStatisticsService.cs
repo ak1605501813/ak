@@ -67,7 +67,7 @@ namespace HRManage.Service
             }
             catch (Exception ex)
             {
-                throw new Exception($"400|QueryAll Erro {ex}");
+                throw new Exception($"400|QueryAll Erro {ex}"); 
             }
         }
     }
