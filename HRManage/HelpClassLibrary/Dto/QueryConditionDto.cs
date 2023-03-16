@@ -13,7 +13,7 @@ namespace HelpClassLibrary.Dto
         /// <summary>
         /// 查询操作
         /// </summary>
-        public QueryOperatorDTO Operator { get; set; }
+        public QueryOperatorDto Operator { get; set; }
         /// <summary>
         /// 值
         /// </summary>
@@ -21,6 +21,6 @@ namespace HelpClassLibrary.Dto
         /// <summary>
         /// 运算符
         /// </summary>
-        public QueryCharacterDTO Character { get; set; }
+        public QueryCharacterDto Character { get; set; }
     }
 }
