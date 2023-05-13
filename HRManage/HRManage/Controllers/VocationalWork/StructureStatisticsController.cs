@@ -1,9 +1,9 @@
 ﻿using HelpClassLibrary.Dto;
-using HRManage.IService;
+using Jinxi.IService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace HRManage.Controllers.VocationalWork
+namespace Jinxi.Controllers.VocationalWork
 {
     [Route("api/[controller]")]
     [ApiController]

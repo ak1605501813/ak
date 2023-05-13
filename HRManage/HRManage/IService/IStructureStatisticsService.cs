@@ -1,6 +1,6 @@
 ﻿using HelpClassLibrary.Dto;
 
-namespace HRManage.IService
+namespace Jinxi.IService
 {
     public interface IStructureStatisticsService
     {

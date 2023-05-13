@@ -4,7 +4,7 @@ using SugarRedis;
 using System;
 using System.Collections.Generic;
 
-namespace HRManage.Tool
+namespace Jinxi.Tool
 {
     public class SqlSugarRedisCacheTool : ICacheService
     {

@@ -1,9 +1,9 @@
-﻿using HRManage.Tool;
+﻿using Jinxi.Tool;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
-namespace HRManage.Controllers.DBTakePrecedence
+namespace Jinxi.Controllers.DBTakePrecedence
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -24,7 +24,7 @@ namespace HRManage.Controllers.DBTakePrecedence
         [Route("CreateEntity")]
         public IActionResult CreateEntity(string tblName, string savePath)
         {
-            string nameSpace = "HRManage.Entity";
+            string nameSpace = "Jinxi.Entity";
             var db = sqlsugarTool.GetDb();
             foreach (var item in db.DbMaintenance.GetTableInfoList())
             {

@@ -1,0 +1,266 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Jinxi</name>
+    </assembly>
+    <members>
+        <member name="M:Jinxi.Controllers.DBTakePrecedence.CreateEntityController.CreateEntity(System.String,System.String)">
+            <summary>
+            创建实体
+            </summary>
+            <param name="tblName">数据库表名</param>
+            <param name="savePath">存放路径</param>
+            <returns>返回Http状态码</returns>
+        </member>
+        <member name="M:Jinxi.Controllers.VocationalWork.StructureStatisticsController.QueryAll(HelpClassLibrary.Dto.QueryParametersDto)">
+            <summary>
+            查询人员信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Jinxi.Entity.CmDepartment">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Jinxi.Entity.CmDepartment.DepartmentCode">
+            <summary>
+            Desc:主键
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmDepartment.Companyid">
+            <summary>
+            Desc:公司码
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmDepartment.DepartmentName">
+            <summary>
+            Desc:名称
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmDepartment.SuperiorDep">
+            <summary>
+            Desc:上级部门
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmDepartment.IsThirdParty">
+            <summary>
+            Desc:是否第三方公司
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmDepartment.Leader">
+            <summary>
+            Desc:分管领导---userid
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmDepartment.SortNumber">
+            <summary>
+            Desc:用于排序
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmDepartment.Createuser">
+            <summary>
+            Desc:录入人
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmDepartment.Createdate">
+            <summary>
+            Desc:录入时间
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmDepartment.Modifier">
+            <summary>
+            Desc:修改人
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmDepartment.Modifydate">
+            <summary>
+            Desc:修改时间
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmDepartment.DepartmentNameEn">
+            <summary>
+            Desc:部门英文名称
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmDepartment.Source">
+            <summary>
+            Desc:数据来源1:人事系统
+            Default:0
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmDepartment.Validdate">
+            <summary>
+            Desc:有效日期
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmDepartment.Invalidflag">
+            <summary>
+            Desc:失效标识
+            Default:0
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmDepartment.Pids">
+            <summary>
+            Desc:所有的上级id,使用逗号分隔
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmDepartment.Level">
+            <summary>
+            Desc:级数
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmDepartment.Isbranch">
+            <summary>
+            Desc:是否跟公司 1:是、0：否，部门
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmDepartment.Headid">
+            <summary>
+            Desc:负责人
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:Jinxi.Entity.CmPosition">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Jinxi.Entity.CmPosition.PositionCode">
+            <summary>
+            Desc:岗位Id
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmPosition.Companyid">
+            <summary>
+            Desc:公司码
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmPosition.PositionDescribe">
+            <summary>
+            Desc:岗位描述
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmPosition.PositionName">
+            <summary>
+            Desc:岗位名称
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmPosition.PositionNameEn">
+            <summary>
+            Desc:岗位名称
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmPosition.Createuser">
+            <summary>
+            Desc:录入人
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmPosition.Createdate">
+            <summary>
+            Desc:录入时间
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmPosition.Modifier">
+            <summary>
+            Desc:修改人
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmPosition.Modifydate">
+            <summary>
+            Desc:修改时间
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmPosition.SortNumber">
+            <summary>
+            Desc:排序号
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmPosition.Source">
+            <summary>
+            Desc:数据来源1:人事系统
+            Default:0
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.CmPosition.Subcompanyid">
+            <summary>
+            Desc:子公司id
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="M:Jinxi.Service.StructureStatisticsService.QueryAll(HelpClassLibrary.Dto.QueryParametersDto)">
+            <summary>
+            查询人员信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Jinxi.Tool.StrTool.ToCamelName(System.String,System.Char)">
+            <summary>
+            根据数据库表生成实体类相关
+            </summary>
+            <param name="name">关联名称</param>
+            <param name="delimiter">分割符</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

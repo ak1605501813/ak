@@ -1,6 +1,6 @@
-using HRManage.IService;
-using HRManage.Service;
-using HRManage.Tool;
+using Jinxi.IService;
+using Jinxi.Service;
+using Jinxi.Tool;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -19,7 +19,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HRManage
+namespace Jinxi
 {
     public class Startup
     {
@@ -31,6 +31,9 @@ namespace HRManage
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
+            //services.AddSingleton(Configuration);
+            Console.WriteLine(Configuration["Jwt:SecretKey"]);
+            var test=Configuration["MysqlInfo"];
             services.AddControllers();
             services.AddSwaggerGen();
             services.AddSingleton(new SqlsugarTool(Configuration.GetSection("MysqlInfo").Get<string>()));

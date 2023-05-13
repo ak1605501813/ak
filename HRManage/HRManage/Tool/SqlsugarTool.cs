@@ -2,7 +2,7 @@
 using SqlSugar;
 using System;
 
-namespace HRManage.Tool
+namespace Jinxi.Tool
 {
     public class SqlsugarTool
     {

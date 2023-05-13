@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace HRManage.Controllers.Authority
+namespace Jinxi.Controllers.Authority
 {
     [Route("api/[controller]")]
     [ApiController]

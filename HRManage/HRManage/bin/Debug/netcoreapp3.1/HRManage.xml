@@ -12,6 +12,13 @@
             <param name="savePath">存放路径</param>
             <returns>返回Http状态码</returns>
         </member>
+        <member name="M:HRManage.Controllers.VocationalWork.StructureStatisticsController.QueryAll(HelpClassLibrary.Dto.QueryParametersDto)">
+            <summary>
+            查询人员信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
         <member name="T:HRManage.Entity.CmDepartment">
             <summary>
             
@@ -238,6 +245,14 @@
             Default:
             Nullable:True
             </summary>           
+        </member>
+        <member name="M:HRManage.Service.StructureStatisticsService.QueryAll(HelpClassLibrary.Dto.QueryParametersDto)">
+            <summary>
+            查询人员信息
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
         </member>
         <member name="M:HRManage.Tool.StrTool.ToCamelName(System.String,System.Char)">
             <summary>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace HRManage.Tool
+namespace Jinxi.Tool
 {
     public class StrTool
     {

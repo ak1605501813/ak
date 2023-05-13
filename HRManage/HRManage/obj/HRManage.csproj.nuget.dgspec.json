@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\HRManage\\HRManage\\HRManage.csproj": {}
+    "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\新建文件夹\\ak\\HRManage\\HRManage\\HRManage.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\HRManage\\HelpClassLibrary\\HelpClassLibrary.csproj": {
+    "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\新建文件夹\\ak\\HRManage\\HelpClassLibrary\\HelpClassLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\HRManage\\HelpClassLibrary\\HelpClassLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\新建文件夹\\ak\\HRManage\\HelpClassLibrary\\HelpClassLibrary.csproj",
         "projectName": "HelpClassLibrary",
-        "projectPath": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\HRManage\\HelpClassLibrary\\HelpClassLibrary.csproj",
+        "projectPath": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\新建文件夹\\ak\\HRManage\\HelpClassLibrary\\HelpClassLibrary.csproj",
         "packagesPath": "C:\\Users\\kohan.jiang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\HRManage\\HelpClassLibrary\\obj\\",
+        "outputPath": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\新建文件夹\\ak\\HRManage\\HelpClassLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\VS\\SDK\\NuGetPackages"
@@ -62,14 +62,14 @@
         }
       }
     },
-    "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\HRManage\\HRManage\\HRManage.csproj": {
+    "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\新建文件夹\\ak\\HRManage\\HRManage\\HRManage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\HRManage\\HRManage\\HRManage.csproj",
+        "projectUniqueName": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\新建文件夹\\ak\\HRManage\\HRManage\\HRManage.csproj",
         "projectName": "HRManage",
-        "projectPath": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\HRManage\\HRManage\\HRManage.csproj",
+        "projectPath": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\新建文件夹\\ak\\HRManage\\HRManage\\HRManage.csproj",
         "packagesPath": "C:\\Users\\kohan.jiang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\HRManage\\HRManage\\obj\\",
+        "outputPath": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\新建文件夹\\ak\\HRManage\\HRManage\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\VS\\SDK\\NuGetPackages"
@@ -90,8 +90,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\HRManage\\HelpClassLibrary\\HelpClassLibrary.csproj": {
-                "projectPath": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\HRManage\\HelpClassLibrary\\HelpClassLibrary.csproj"
+              "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\新建文件夹\\ak\\HRManage\\HelpClassLibrary\\HelpClassLibrary.csproj": {
+                "projectPath": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\新建文件夹\\ak\\HRManage\\HelpClassLibrary\\HelpClassLibrary.csproj"
               }
             }
           }
@@ -106,6 +106,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Com.Ctrip.Framework.Apollo.Configuration": {
+              "target": "Package",
+              "version": "[2.10.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[3.1.0, )"

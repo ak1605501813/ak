@@ -1,13 +1,13 @@
 ﻿using HelpClassLibrary.Dto;
 using HelpClassLibrary.Tool;
-using HRManage.Entity;
-using HRManage.IService;
-using HRManage.Tool;
+using Jinxi.Entity;
+using Jinxi.IService;
+using Jinxi.Tool;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace HRManage.Service
+namespace Jinxi.Service
 {
     public class StructureStatisticsService : IStructureStatisticsService
     {
