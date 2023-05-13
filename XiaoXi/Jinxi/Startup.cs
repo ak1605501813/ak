@@ -4,20 +4,16 @@ using Jinxi.Tool;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Minio;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Jinxi
 {
@@ -26,19 +22,23 @@ namespace Jinxi
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            ConfigTool.InitConfig(configuration);
         }
-
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddSingleton(Configuration);
-            Console.WriteLine(Configuration["Jwt:SecretKey"]);
-            var test=Configuration["MysqlInfo"];
             services.AddControllers();
             services.AddSwaggerGen();
+            #region minio客户端注入
+            var minioClient = new MinioClient(Configuration["MinIO:Endpoint"]
+                , Configuration["MinIO:AccessKey"]
+                , Configuration["MinIO:SecretKey"]);
+            services.AddSingleton(minioClient);
+            #endregion
             services.AddSingleton(new SqlsugarTool(Configuration.GetSection("MysqlInfo").Get<string>()));
             services.AddSingleton(new JwtCreateTool(Configuration));
             services.AddSingleton<IStructureStatisticsService, StructureStatisticsService>();
+            services.AddScoped<MinioTool>(); 
             services.AddAuthentication(options =>
             {
                 options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -73,16 +73,16 @@ namespace Jinxi
                     Type = SecuritySchemeType.ApiKey
                 });
                 //认证方式，此方式为全局添加
-                //c.AddSecurityRequirement(new OpenApiSecurityRequirement {
-                //    { new OpenApiSecurityScheme
-                //    {
-                //    Reference = new OpenApiReference()
-                //    {
-                //    Id = "Bearer",
-                //    Type = ReferenceType.SecurityScheme
-                //    }
-                //    }, Array.Empty<string>() }
-                //    });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement {
+                    { new OpenApiSecurityScheme
+                    {
+                    Reference = new OpenApiReference()
+                    {
+                    Id = "Bearer",
+                    Type = ReferenceType.SecurityScheme
+                    }
+                    }, Array.Empty<string>() }
+                    });
             });
             //解决跨域问题
             services.AddCors(options =>

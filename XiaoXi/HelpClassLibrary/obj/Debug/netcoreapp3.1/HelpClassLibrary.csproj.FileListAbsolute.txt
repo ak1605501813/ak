@@ -8,3 +8,13 @@ C:\Users\kohan.jiang\Desktop\112\ak\新建文件夹\ak\HRManage\HelpClassLibrary
 C:\Users\kohan.jiang\Desktop\112\ak\新建文件夹\ak\HRManage\HelpClassLibrary\obj\Debug\netcoreapp3.1\HelpClassLibrary.csproj.CoreCompileInputs.cache
 C:\Users\kohan.jiang\Desktop\112\ak\新建文件夹\ak\HRManage\HelpClassLibrary\obj\Debug\netcoreapp3.1\HelpClassLibrary.dll
 C:\Users\kohan.jiang\Desktop\112\ak\新建文件夹\ak\HRManage\HelpClassLibrary\obj\Debug\netcoreapp3.1\HelpClassLibrary.pdb
+C:\Users\kohan.jiang\Desktop\112\ak\Xixi\ak\XiaoXi\HelpClassLibrary\bin\Debug\netcoreapp3.1\HelpClassLibrary.deps.json
+C:\Users\kohan.jiang\Desktop\112\ak\Xixi\ak\XiaoXi\HelpClassLibrary\bin\Debug\netcoreapp3.1\HelpClassLibrary.dll
+C:\Users\kohan.jiang\Desktop\112\ak\Xixi\ak\XiaoXi\HelpClassLibrary\bin\Debug\netcoreapp3.1\HelpClassLibrary.pdb
+C:\Users\kohan.jiang\Desktop\112\ak\Xixi\ak\XiaoXi\HelpClassLibrary\obj\Debug\netcoreapp3.1\HelpClassLibrary.csproj.AssemblyReference.cache
+C:\Users\kohan.jiang\Desktop\112\ak\Xixi\ak\XiaoXi\HelpClassLibrary\obj\Debug\netcoreapp3.1\HelpClassLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kohan.jiang\Desktop\112\ak\Xixi\ak\XiaoXi\HelpClassLibrary\obj\Debug\netcoreapp3.1\HelpClassLibrary.AssemblyInfoInputs.cache
+C:\Users\kohan.jiang\Desktop\112\ak\Xixi\ak\XiaoXi\HelpClassLibrary\obj\Debug\netcoreapp3.1\HelpClassLibrary.AssemblyInfo.cs
+C:\Users\kohan.jiang\Desktop\112\ak\Xixi\ak\XiaoXi\HelpClassLibrary\obj\Debug\netcoreapp3.1\HelpClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\kohan.jiang\Desktop\112\ak\Xixi\ak\XiaoXi\HelpClassLibrary\obj\Debug\netcoreapp3.1\HelpClassLibrary.dll
+C:\Users\kohan.jiang\Desktop\112\ak\Xixi\ak\XiaoXi\HelpClassLibrary\obj\Debug\netcoreapp3.1\HelpClassLibrary.pdb

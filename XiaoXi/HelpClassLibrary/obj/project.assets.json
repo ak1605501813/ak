@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\新建文件夹\\ak\\HRManage\\HelpClassLibrary\\HelpClassLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\Xixi\\ak\\XiaoXi\\HelpClassLibrary\\HelpClassLibrary.csproj",
       "projectName": "HelpClassLibrary",
-      "projectPath": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\新建文件夹\\ak\\HRManage\\HelpClassLibrary\\HelpClassLibrary.csproj",
+      "projectPath": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\Xixi\\ak\\XiaoXi\\HelpClassLibrary\\HelpClassLibrary.csproj",
       "packagesPath": "C:\\Users\\kohan.jiang\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\新建文件夹\\ak\\HRManage\\HelpClassLibrary\\obj\\",
+      "outputPath": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\Xixi\\ak\\XiaoXi\\HelpClassLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\VS\\SDK\\NuGetPackages"

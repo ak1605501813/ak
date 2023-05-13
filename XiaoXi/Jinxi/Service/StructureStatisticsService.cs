@@ -1,6 +1,5 @@
 ﻿using HelpClassLibrary.Dto;
 using HelpClassLibrary.Tool;
-using Jinxi.Entity;
 using Jinxi.IService;
 using Jinxi.Tool;
 using System;
@@ -20,7 +19,8 @@ namespace Jinxi.Service
         {
             try
             {
-                return sqlsugarTool.GetDb().Queryable<CmDepartment>().WithCache().ToList();
+                return "Sqlsugar";
+                //return sqlsugarTool.GetDb().Queryable<CmDepartment>().WithCache().ToList();
             }
             catch (Exception ex) 
             {
@@ -39,32 +39,33 @@ namespace Jinxi.Service
         {
             try
             {
-                //var user = _httpContextAccessor?.HttpContext?.User;
-                #region 条件过滤
-                if (model.Conditions != null && model.Conditions.Count > 0)
-                {
-                    model.Conditions = model.Conditions.Where(i => i.Value != null).ToList();
-                }
-                #endregion
-                int totalCount = 0;
-                List<CmDepartment> employeeInfos = null;
-                var sql = "1=1 " + SqlTool.MysqlStr(model.Conditions);
-                var queryData = sqlsugarTool.GetDb().Queryable<CmDepartment>().Where(sql).WithCache();
-                if (model.OrderBys.Count() > 0)
-                {
-                    var orderBys = SqlTool.ParseOrderBy(model.OrderBys);
-                    queryData = queryData.OrderBy(orderBys);
-                }
-                if (model.PageIndex > 0 && model.PageSize > 0)
-                {
-                    employeeInfos = queryData.ToPageList(model.PageIndex, model.PageSize, ref totalCount);
-                }
-                else
-                {
-                    employeeInfos = queryData.ToList();
-                    totalCount = employeeInfos.Count;
-                }
-                return new { data = employeeInfos, total = totalCount };
+                /* //var user = _httpContextAccessor?.HttpContext?.User;
+                 #region 条件过滤
+                 if (model.Conditions != null && model.Conditions.Count > 0)
+                 {
+                     model.Conditions = model.Conditions.Where(i => i.Value != null).ToList();
+                 }
+                 #endregion
+                 int totalCount = 0;
+                 List<CmDepartment> employeeInfos = null;
+                 var sql = "1=1 " + SqlTool.MysqlStr(model.Conditions);
+                 var queryData = sqlsugarTool.GetDb().Queryable<CmDepartment>().Where(sql).WithCache();
+                 if (model.OrderBys.Count() > 0)
+                 {
+                     var orderBys = SqlTool.ParseOrderBy(model.OrderBys);
+                     queryData = queryData.OrderBy(orderBys);
+                 }
+                 if (model.PageIndex > 0 && model.PageSize > 0)
+                 {
+                     employeeInfos = queryData.ToPageList(model.PageIndex, model.PageSize, ref totalCount);
+                 }
+                 else
+                 {
+                     employeeInfos = queryData.ToList();
+                     totalCount = employeeInfos.Count;
+                 }
+                 return new { data = employeeInfos, total = totalCount };*/
+                return "---------";
             }
             catch (Exception ex)
             {

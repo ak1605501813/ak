@@ -12,6 +12,20 @@
             <param name="savePath">存放路径</param>
             <returns>返回Http状态码</returns>
         </member>
+        <member name="M:Jinxi.Controllers.Minio.MinioController.UploadFile(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            上传附件
+            </summary>
+            <param name="formFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jinxi.Controllers.Minio.MinioController.DownloadFile(System.String)">
+            <summary>
+            下载附件
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
         <member name="M:Jinxi.Controllers.VocationalWork.StructureStatisticsController.QueryAll(HelpClassLibrary.Dto.QueryParametersDto)">
             <summary>
             查询人员信息
@@ -253,6 +267,20 @@
             <param name="model"></param>
             <returns></returns>
             <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:Jinxi.Tool.MinioTool.UploadFile(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            上传附件
+            </summary>
+            <param name="formFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Jinxi.Tool.MinioTool.DownloadFile(System.String)">
+            <summary>
+            下载附件
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
         </member>
         <member name="M:Jinxi.Tool.StrTool.ToCamelName(System.String,System.Char)">
             <summary>
