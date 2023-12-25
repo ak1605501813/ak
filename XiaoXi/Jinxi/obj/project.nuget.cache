@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dC3+Nx2GaL2XTTqhMDwnLEpbZhXWYmOHNRB6sZ3lGMGXUGkK8EZN+AfJMOoPK4bkkQAtvSAJlp6PJvck6Y+slw==",
+  "dgSpecHash": "DsuxKKbtupGufA2sEjG7WwTeQa73AtEkVOFs2iHipZM2TRngbMvH3zgQ+d8NbJefea8hsHCXtf3QtO3sNFcrxQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\Xixi\\ak\\XiaoXi\\Jinxi\\Jinxi.csproj",
+  "projectFilePath": "C:\\Users\\kohan.jiang\\Desktop\\112\\kohan\\ak\\XiaoXi\\Jinxi\\Jinxi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kohan.jiang\\.nuget\\packages\\com.ctrip.framework.apollo\\2.10.0\\com.ctrip.framework.apollo.2.10.0.nupkg.sha512",
     "C:\\Users\\kohan.jiang\\.nuget\\packages\\com.ctrip.framework.apollo.configuration\\2.10.1\\com.ctrip.framework.apollo.configuration.2.10.1.nupkg.sha512",

@@ -7,6 +7,7 @@ namespace Jinxi.Controllers.VocationalWork
 {
     [Route("api/[controller]")]
     [ApiController]
+    
     public class StructureStatisticsController : ControllerBase
     {
         IStructureStatisticsService structureStatistics;

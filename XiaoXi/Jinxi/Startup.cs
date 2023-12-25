@@ -2,6 +2,7 @@ using Jinxi.IService;
 using Jinxi.Service;
 using Jinxi.Tool;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -29,19 +30,25 @@ namespace Jinxi
         {
             services.AddControllers();
             services.AddSwaggerGen();
-            #region minio客户端注入
+            /*#region minio客户端注入
             var minioClient = new MinioClient(Configuration["MinIO:Endpoint"]
                 , Configuration["MinIO:AccessKey"]
                 , Configuration["MinIO:SecretKey"]);
             services.AddSingleton(minioClient);
-            #endregion
+            #endregion*/
+            var minioClient = new MinioClient("11", "22" ,"33");
+            services.AddSingleton(minioClient);
+            Console.WriteLine(Configuration.GetSection("MysqlInfo").Get<string>());
             services.AddSingleton(new SqlsugarTool(Configuration.GetSection("MysqlInfo").Get<string>()));
             services.AddSingleton(new JwtCreateTool(Configuration));
             services.AddSingleton<IStructureStatisticsService, StructureStatisticsService>();
+            services.AddSingleton<IEasyToForgetAccountService, EasyToForgetAccountService>();
             services.AddScoped<MinioTool>(); 
             services.AddAuthentication(options =>
             {
-                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+                /*options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;*/
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
             .AddJwtBearer(options =>
             {
@@ -57,6 +64,13 @@ namespace Jinxi
                     ClockSkew = TimeSpan.FromSeconds(30), //过期时间容错值，解决服务器端时间不同步问题（秒）
                     RequireExpirationTime = true,
                 };
+            });
+            /*配置验证策略让所有控制器走token验证*/
+            services.AddAuthorization(options =>
+            {
+                options.DefaultPolicy = new AuthorizationPolicyBuilder()
+                    .RequireAuthenticatedUser() // 需要对用户进行身份验证
+                    .Build();
             });
             //配置swagger信息
             services.AddSwaggerGen(c =>
@@ -88,7 +102,7 @@ namespace Jinxi
             services.AddCors(options =>
             {
                 options.AddPolicy(
-                    "MyAllowSpecificOrigins",
+                    "MRJIANG",
                     builder => builder.AllowAnyOrigin()
                     .AllowAnyMethod()
                     .AllowAnyHeader());
@@ -100,15 +114,24 @@ namespace Jinxi
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseRouting();
+
+            app.UseAuthentication();
+
+            app.UseAuthorization();
+
+            app.UseStaticFiles();
+
+            app.UseCors("MRJIANG");
+
             app.UseSwaggerUI();
             app.UseSwagger(c =>
             {
                 c.SerializeAsV2 = true;
             });
-            app.UseRouting();
-
-            app.UseAuthorization();
-
+           
+            
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

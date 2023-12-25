@@ -4483,11 +4483,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\Xixi\\ak\\XiaoXi\\Jinxi\\Jinxi.csproj",
+      "projectUniqueName": "C:\\Users\\kohan.jiang\\Desktop\\112\\kohan\\ak\\XiaoXi\\Jinxi\\Jinxi.csproj",
       "projectName": "Jinxi",
-      "projectPath": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\Xixi\\ak\\XiaoXi\\Jinxi\\Jinxi.csproj",
+      "projectPath": "C:\\Users\\kohan.jiang\\Desktop\\112\\kohan\\ak\\XiaoXi\\Jinxi\\Jinxi.csproj",
       "packagesPath": "C:\\Users\\kohan.jiang\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\Xixi\\ak\\XiaoXi\\Jinxi\\obj\\",
+      "outputPath": "C:\\Users\\kohan.jiang\\Desktop\\112\\kohan\\ak\\XiaoXi\\Jinxi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\VS\\SDK\\NuGetPackages"
@@ -4508,8 +4508,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\Xixi\\ak\\XiaoXi\\HelpClassLibrary\\HelpClassLibrary.csproj": {
-              "projectPath": "C:\\Users\\kohan.jiang\\Desktop\\112\\ak\\Xixi\\ak\\XiaoXi\\HelpClassLibrary\\HelpClassLibrary.csproj"
+            "C:\\Users\\kohan.jiang\\Desktop\\112\\kohan\\ak\\XiaoXi\\HelpClassLibrary\\HelpClassLibrary.csproj": {
+              "projectPath": "C:\\Users\\kohan.jiang\\Desktop\\112\\kohan\\ak\\XiaoXi\\HelpClassLibrary\\HelpClassLibrary.csproj"
             }
           }
         }

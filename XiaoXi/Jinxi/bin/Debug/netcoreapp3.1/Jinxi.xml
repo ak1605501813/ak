@@ -4,6 +4,13 @@
         <name>Jinxi</name>
     </assembly>
     <members>
+        <member name="M:Jinxi.Controllers.Authority.AuthorityAuthenticationController.GetToken">
+            <summary>
+            添加详情信息
+            </summary>
+            <param name="input">筛选条件和排序</param>
+            <returns>返回客户信息</returns>
+        </member>
         <member name="M:Jinxi.Controllers.DBTakePrecedence.CreateEntityController.CreateEntity(System.String,System.String)">
             <summary>
             创建实体
@@ -11,6 +18,13 @@
             <param name="tblName">数据库表名</param>
             <param name="savePath">存放路径</param>
             <returns>返回Http状态码</returns>
+        </member>
+        <member name="M:Jinxi.Controllers.LifeTipspage.EasyToForgetAccountController.ADD(Jinxi.Entity.AccountDetails)">
+            <summary>
+            添加详情信息
+            </summary>
+            <param name="input">筛选条件和排序</param>
+            <returns>返回客户信息</returns>
         </member>
         <member name="M:Jinxi.Controllers.Minio.MinioController.UploadFile(Microsoft.AspNetCore.Http.IFormFile)">
             <summary>
@@ -33,229 +47,56 @@
             <param name="model"></param>
             <returns></returns>
         </member>
-        <member name="T:Jinxi.Entity.CmDepartment">
+        <member name="T:Jinxi.Entity.AccountDetails">
             <summary>
             
             </summary>
         </member>
-        <member name="P:Jinxi.Entity.CmDepartment.DepartmentCode">
+        <member name="P:Jinxi.Entity.AccountDetails.Id">
             <summary>
-            Desc:主键
+            Desc:
             Default:
             Nullable:False
             </summary>           
         </member>
-        <member name="P:Jinxi.Entity.CmDepartment.Companyid">
+        <member name="P:Jinxi.Entity.AccountDetails.ReferredToAs">
             <summary>
-            Desc:公司码
-            Default:
-            Nullable:False
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmDepartment.DepartmentName">
-            <summary>
-            Desc:名称
+            Desc:简称
             Default:
             Nullable:True
             </summary>           
         </member>
-        <member name="P:Jinxi.Entity.CmDepartment.SuperiorDep">
+        <member name="P:Jinxi.Entity.AccountDetails.Region">
             <summary>
-            Desc:上级部门
+            Desc:0:系统；1:共享文件
             Default:
             Nullable:True
             </summary>           
         </member>
-        <member name="P:Jinxi.Entity.CmDepartment.IsThirdParty">
+        <member name="P:Jinxi.Entity.AccountDetails.Link">
             <summary>
-            Desc:是否第三方公司
+            Desc:链接地址
             Default:
             Nullable:True
             </summary>           
         </member>
-        <member name="P:Jinxi.Entity.CmDepartment.Leader">
+        <member name="P:Jinxi.Entity.AccountDetails.User">
             <summary>
-            Desc:分管领导---userid
+            Desc:用户名
             Default:
             Nullable:True
             </summary>           
         </member>
-        <member name="P:Jinxi.Entity.CmDepartment.SortNumber">
+        <member name="P:Jinxi.Entity.AccountDetails.Password">
             <summary>
-            Desc:用于排序
+            Desc:密码
             Default:
             Nullable:True
             </summary>           
         </member>
-        <member name="P:Jinxi.Entity.CmDepartment.Createuser">
+        <member name="P:Jinxi.Entity.AccountDetails.Level">
             <summary>
-            Desc:录入人
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmDepartment.Createdate">
-            <summary>
-            Desc:录入时间
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmDepartment.Modifier">
-            <summary>
-            Desc:修改人
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmDepartment.Modifydate">
-            <summary>
-            Desc:修改时间
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmDepartment.DepartmentNameEn">
-            <summary>
-            Desc:部门英文名称
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmDepartment.Source">
-            <summary>
-            Desc:数据来源1:人事系统
-            Default:0
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmDepartment.Validdate">
-            <summary>
-            Desc:有效日期
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmDepartment.Invalidflag">
-            <summary>
-            Desc:失效标识
-            Default:0
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmDepartment.Pids">
-            <summary>
-            Desc:所有的上级id,使用逗号分隔
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmDepartment.Level">
-            <summary>
-            Desc:级数
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmDepartment.Isbranch">
-            <summary>
-            Desc:是否跟公司 1:是、0：否，部门
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmDepartment.Headid">
-            <summary>
-            Desc:负责人
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="T:Jinxi.Entity.CmPosition">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:Jinxi.Entity.CmPosition.PositionCode">
-            <summary>
-            Desc:岗位Id
-            Default:
-            Nullable:False
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmPosition.Companyid">
-            <summary>
-            Desc:公司码
-            Default:
-            Nullable:False
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmPosition.PositionDescribe">
-            <summary>
-            Desc:岗位描述
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmPosition.PositionName">
-            <summary>
-            Desc:岗位名称
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmPosition.PositionNameEn">
-            <summary>
-            Desc:岗位名称
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmPosition.Createuser">
-            <summary>
-            Desc:录入人
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmPosition.Createdate">
-            <summary>
-            Desc:录入时间
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmPosition.Modifier">
-            <summary>
-            Desc:修改人
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmPosition.Modifydate">
-            <summary>
-            Desc:修改时间
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmPosition.SortNumber">
-            <summary>
-            Desc:排序号
-            Default:
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmPosition.Source">
-            <summary>
-            Desc:数据来源1:人事系统
-            Default:0
-            Nullable:True
-            </summary>           
-        </member>
-        <member name="P:Jinxi.Entity.CmPosition.Subcompanyid">
-            <summary>
-            Desc:子公司id
+            Desc:级别（用于排序）
             Default:
             Nullable:True
             </summary>           
