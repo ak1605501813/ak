@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -43,12 +44,12 @@ namespace Jinxi
             services.AddSingleton(new JwtCreateTool(Configuration));
             services.AddSingleton<IStructureStatisticsService, StructureStatisticsService>();
             services.AddSingleton<IEasyToForgetAccountService, EasyToForgetAccountService>();
+            services.AddSingleton<IAuthorityAuthenticationService, AuthorityAuthenticationService>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<MinioTool>(); 
             services.AddAuthentication(options =>
             {
-                /*options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;*/
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
             })
             .AddJwtBearer(options =>
             {
@@ -64,13 +65,6 @@ namespace Jinxi
                     ClockSkew = TimeSpan.FromSeconds(30), //过期时间容错值，解决服务器端时间不同步问题（秒）
                     RequireExpirationTime = true,
                 };
-            });
-            /*配置验证策略让所有控制器走token验证*/
-            services.AddAuthorization(options =>
-            {
-                options.DefaultPolicy = new AuthorizationPolicyBuilder()
-                    .RequireAuthenticatedUser() // 需要对用户进行身份验证
-                    .Build();
             });
             //配置swagger信息
             services.AddSwaggerGen(c =>
@@ -116,13 +110,13 @@ namespace Jinxi
             }
             app.UseRouting();
 
-            app.UseAuthentication();
-
-            app.UseAuthorization();
-
             app.UseStaticFiles();
 
             app.UseCors("MRJIANG");
+
+            app.UseAuthentication();
+
+            app.UseAuthorization();
 
             app.UseSwaggerUI();
             app.UseSwagger(c =>
@@ -134,7 +128,7 @@ namespace Jinxi
             
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapControllers().RequireAuthorization();
             });
         }
     }

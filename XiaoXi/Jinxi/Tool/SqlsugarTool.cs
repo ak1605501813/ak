@@ -18,7 +18,7 @@ namespace Jinxi.Tool
             {
                 ConnectionString = connStr,
                 DbType = DbType.MySql,
-                IsAutoCloseConnection = true,
+                IsAutoCloseConnection = true,//自动释放和关闭数据库连接，如果有事务事务结束时关闭，否则每次操作后关闭//是否自动释放数据库(默认false)，设为true我们不需要close或者Using的操作
                 ConfigureExternalServices = new ConfigureExternalServices()
                 {
                     DataInfoCacheService = myCache //配置我们创建的缓存类，具体用法看标题5

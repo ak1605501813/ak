@@ -6,7 +6,14 @@
     <members>
         <member name="M:Jinxi.Controllers.Authority.AuthorityAuthenticationController.GetToken">
             <summary>
-            添加详情信息
+            获取token
+            </summary>
+            <param name="input">筛选条件和排序</param>
+            <returns>返回客户信息</returns>
+        </member>
+        <member name="M:Jinxi.Controllers.Authority.AuthorityAuthenticationController.Login(Jinxi.DTO.LoginDTO)">
+            <summary>
+            用户登录
             </summary>
             <param name="input">筛选条件和排序</param>
             <returns>返回客户信息</returns>
@@ -97,6 +104,81 @@
         <member name="P:Jinxi.Entity.AccountDetails.Level">
             <summary>
             Desc:级别（用于排序）
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.AccountDetails.Createuser">
+            <summary>
+            Desc:创建用户
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.AccountDetails.Createdatetime">
+            <summary>
+            Desc:创建时间
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.AccountDetails.Modifyuser">
+            <summary>
+            Desc:修改用户
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.AccountDetails.Modifydatetime">
+            <summary>
+            Desc:修改时间
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:Jinxi.Entity.UserInfo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Jinxi.Entity.UserInfo.Id">
+            <summary>
+            Desc:
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.UserInfo.User">
+            <summary>
+            Desc:登录账号
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.UserInfo.Password">
+            <summary>
+            Desc:登录密码
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.UserInfo.Isau">
+            <summary>
+            Desc:是否有权限登录
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.UserInfo.Regdate">
+            <summary>
+            Desc:注册日期
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Jinxi.Entity.UserInfo.Userid">
+            <summary>
+            Desc:用户id
             Default:
             Nullable:True
             </summary>           

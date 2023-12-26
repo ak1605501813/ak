@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Jinxi.DTO;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.IdentityModel.Tokens.Jwt;
@@ -15,7 +16,7 @@ namespace Jinxi.Tool
         {
             _configuration = configuration;
         }
-        public  string CreateToken()
+        public  string CreateToken(LoginDTO input)
         {
             // 1. 定义需要使用到的Claims
             var claims = new[]
@@ -23,9 +24,10 @@ namespace Jinxi.Tool
             /*new Claim(ClaimTypes.Name, "n_admin"),
             new Claim(ClaimTypes.Role, "r_admin"),
             new Claim(JwtRegisteredClaimNames.Jti, "admin"),*/
-            new Claim("jk", "18692521739"),
-            new Claim("ak", "19330910714"),
-            new Claim("ld", "16673474538")
+            new Claim("user", input.User),
+            new Claim("userid", input.Userid),
+           /* new Claim("ak", "19330910714"),
+            new Claim("ld", "16673474538")*/
         };
 
             // 2. 从 appsettings.json 中读取SecretKey
@@ -43,7 +45,7 @@ namespace Jinxi.Tool
                 _configuration["Jwt:Audience"],   //Audience
                 claims,                          //Claims,
                 DateTime.Now,                    //notBefore
-                DateTime.Now.AddSeconds(30),    //expires
+                DateTime.Now.AddDays(1),    //expires
                 signingCredentials               //Credentials
             );
             // 6. 将token变为string

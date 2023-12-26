@@ -11,13 +11,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Dto\**" />
-    <Content Remove="Dto\**" />
-    <EmbeddedResource Remove="Dto\**" />
-    <None Remove="Dto\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Com.Ctrip.Framework.Apollo.Configuration" Version="2.10.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.0" />
     <PackageReference Include="Minio" Version="3.1.13" />
