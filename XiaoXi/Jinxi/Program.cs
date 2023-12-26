@@ -22,9 +22,10 @@ namespace Jinxi
                 {
                     builder.AddApollo(builder.Build().GetSection("apollo"))
                     .AddDefault()
-                    .AddNamespace("appsettings",ConfigFileFormat.Json);
+                    .AddNamespace("appsettings", ConfigFileFormat.Json);
+                    
                 })
-                    .UseStartup<Startup>();
+                    .UseStartup<Startup>().UseUrls("http://*:5000");
                 });
 
     }

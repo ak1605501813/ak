@@ -26,9 +26,30 @@
             <param name="savePath">存放路径</param>
             <returns>返回Http状态码</returns>
         </member>
+        <member name="M:Jinxi.Controllers.LifeTipspage.EasyToForgetAccountController.GetAll(HelpClassLibrary.Dto.QueryParametersDto)">
+            <summary>
+            查询详情信息
+            </summary>
+            <param name="input">筛选条件和排序</param>
+            <returns>返回客户信息</returns>
+        </member>
         <member name="M:Jinxi.Controllers.LifeTipspage.EasyToForgetAccountController.ADD(Jinxi.Entity.AccountDetails)">
             <summary>
             添加详情信息
+            </summary>
+            <param name="input">筛选条件和排序</param>
+            <returns>返回客户信息</returns>
+        </member>
+        <member name="M:Jinxi.Controllers.LifeTipspage.EasyToForgetAccountController.Delete(Jinxi.DTO.PublicIdsDTO)">
+            <summary>
+            删除详情信息
+            </summary>
+            <param name="input">筛选条件和排序</param>
+            <returns>返回客户信息</returns>
+        </member>
+        <member name="M:Jinxi.Controllers.LifeTipspage.EasyToForgetAccountController.Update(Jinxi.Entity.AccountDetails)">
+            <summary>
+            修改详情信息
             </summary>
             <param name="input">筛选条件和排序</param>
             <returns>返回客户信息</returns>
