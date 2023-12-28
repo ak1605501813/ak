@@ -22,7 +22,7 @@ namespace Jinxi.Tool
 
             JsonResult JsonResult = new JsonResult(new
             {
-                Code = "200",
+                Code = "400",
                 Message = "",
                 Data = rtnData ?? string.Empty,
                 MsgType = "Error"

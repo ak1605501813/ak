@@ -46,7 +46,16 @@ namespace Jinxi
             services.AddSingleton<IEasyToForgetAccountService, EasyToForgetAccountService>();
             services.AddSingleton<IAuthorityAuthenticationService, AuthorityAuthenticationService>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped<MinioTool>(); 
+            services.AddScoped<MinioTool>();
+            //解决跨域问题
+            services.AddCors(options =>
+            {
+                options.AddPolicy(
+                    "MyAllowSpecificOrigins",
+                    builder => builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
+            });
             services.AddAuthentication(options =>
             {
                 options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -92,15 +101,7 @@ namespace Jinxi
                     }, Array.Empty<string>() }
                     });
             });
-            //解决跨域问题
-            services.AddCors(options =>
-            {
-                options.AddPolicy(
-                    "MRJIANG",
-                    builder => builder.AllowAnyOrigin()
-                    .AllowAnyMethod()
-                    .AllowAnyHeader());
-            });
+           
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -112,7 +113,7 @@ namespace Jinxi
 
             app.UseStaticFiles();
 
-            app.UseCors("MRJIANG");
+            app.UseCors("MyAllowSpecificOrigins");
 
             app.UseAuthentication();
 
